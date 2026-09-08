@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChefHat, Wheat, Cake } from 'lucide-react';
+import Image from 'next/image';
+import { Wheat, Cake } from 'lucide-react';
 import { SITE_NAME } from '@/config/site';
 
 export default function Navbar() {
@@ -9,8 +10,15 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-bakery-accent flex items-center justify-center text-white shadow-sm group-hover:bg-bakery-accentHover transition-colors">
-            <ChefHat className="w-5 h-5" />
+          <div className="relative w-9 h-9 rounded-xl overflow-hidden shadow-xs border border-orange-200/50 group-hover:scale-105 transition-transform flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt={`${SITE_NAME} Logo`}
+              width={36}
+              height={36}
+              className="w-full h-full object-contain"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-base sm:text-lg text-bakery-dark tracking-tight leading-none">

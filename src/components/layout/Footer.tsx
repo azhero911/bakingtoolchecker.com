@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE_NAME, SITE_TAGLINE } from '@/config/site';
-import { ChefHat } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,8 +9,16 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-stone-100">
           <div className="space-y-1 max-w-md">
-            <div className="flex items-center gap-2">
-              <ChefHat className="w-5 h-5 text-bakery-accent" />
+            <div className="flex items-center gap-2.5">
+              <div className="relative w-7 h-7 rounded-lg overflow-hidden border border-orange-200/50 flex-shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt={`${SITE_NAME} Logo`}
+                  width={28}
+                  height={28}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span className="font-extrabold text-base text-bakery-dark">{SITE_NAME}</span>
             </div>
             <p className="text-xs text-bakery-subtle leading-relaxed">{SITE_TAGLINE}</p>
