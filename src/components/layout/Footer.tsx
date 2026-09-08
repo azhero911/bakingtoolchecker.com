@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="text-xs text-bakery-subtle leading-relaxed">{SITE_TAGLINE}</p>
           </div>
 
-          <div className="flex flex-wrap gap-6 text-xs font-bold text-bakery-dark">
+          <div className="flex flex-wrap gap-5 text-xs font-bold text-bakery-dark">
             <Link href="/" className="hover:text-bakery-accent transition-colors">
               Home
             </Link>
@@ -40,9 +40,25 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Formula & Method Transparency */}
+        <div className="py-6 border-b border-stone-100 grid grid-cols-1 md:grid-cols-3 gap-6 text-[11px] text-bakery-subtle">
+          <div>
+            <span className="font-bold text-bakery-dark block mb-1">Standardized Math</span>
+            <p>Calculations adhere to artisan baking conventions: flour as 100% baseline, true sourdough starter flour/water splits, and geometric pan capacity.</p>
+          </div>
+          <div>
+            <span className="font-bold text-bakery-dark block mb-1">Precision Guarantee</span>
+            <p>Full floating-point precision is preserved across all conversions (grams, ounces, inches, centimeters) before rounding for kitchen display.</p>
+          </div>
+          <div>
+            <span className="font-bold text-bakery-dark block mb-1">Privacy Guarantee</span>
+            <p>Calculations run locally in your browser. We don't upload calculator inputs to a server.</p>
+          </div>
+        </div>
+
         <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-bakery-subtle">
-          <p>© {new Date().getFullYear()} {SITE_NAME}. Free, private, client-side baking math for bakers.</p>
-          <p>No account required. All calculations occur locally in your browser.</p>
+          <p>© {new Date().getFullYear()} {SITE_NAME}. Free to use. No sign-up required.</p>
+          <p>Built for home hobbyists and professional artisan bakers.</p>
         </div>
       </div>
     </footer>
