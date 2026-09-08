@@ -94,99 +94,153 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CALCULATORS SECTION */}
-      <div id="calculators" className="scroll-mt-24 space-y-12 mb-16">
-        {/* CATEGORY 1: Bread & Sourdough */}
-        <section id="bread">
-          <div className="flex items-center gap-2.5 mb-5 border-b border-bakery-border pb-3">
-            <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
-              <Wheat className="w-5 h-5" />
-            </div>
+      {/* CALCULATORS SECTION (Matching Reference Card Design) */}
+      <div id="calculators" className="scroll-mt-24 mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-8 border-b border-bakery-border pb-4">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-bakery-dark tracking-tight">
+              Featured Baking Calculators
+            </h2>
+            <p className="text-base text-bakery-muted mt-1">
+              Precision kitchen tools for bread hobbyists, pastry chefs, and home bakers.
+            </p>
+          </div>
+          <span className="text-xs font-bold text-bakery-accent bg-amber-50 border border-amber-200/60 px-3 py-1 rounded-full self-start sm:self-auto">
+            3 Active Calculators
+          </span>
+        </div>
+
+        {/* 3-Column Visual Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {/* Card 1: Sourdough Hydration */}
+          <Link
+            id="bread"
+            href="/tools/sourdough-hydration-calculator"
+            className="bg-white rounded-2xl border border-stone-200/90 p-5 shadow-xs hover:border-bakery-accent/50 hover:shadow-lg transition-all duration-200 group flex flex-col justify-between"
+          >
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark">Bread &amp; Sourdough Calculators</h2>
-              <p className="text-base text-bakery-muted mt-0.5">Artisan formula mathematics, starter contributions, and hydration scaling.</p>
-            </div>
-          </div>
+              {/* Card Photo Thumbnail */}
+              <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-5 border border-stone-100 bg-stone-100">
+                <Image
+                  src="/images/card-sourdough.webp"
+                  alt="Artisan sourdough loaf and bubbly starter"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {breadTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tools/${tool.slug}`}
-                className="bg-white rounded-2xl border border-bakery-border p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-bakery-accent">
-                      {tool.categoryLabel}
-                    </span>
-                    <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
-                      {getToolIcon(tool.slug)}
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
-                    {tool.name}
-                  </h3>
-                  <p className="text-base text-bakery-muted mt-2.5 leading-relaxed">
-                    {tool.shortDescription}
-                  </p>
+              {/* Icon + Title Header */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center text-bakery-accent shrink-0 group-hover:bg-bakery-accent group-hover:text-white transition-colors">
+                  <Wheat className="w-5 h-5" />
                 </div>
+                <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-tight">
+                  Sourdough Hydration
+                </h3>
+              </div>
 
-                <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-sm sm:text-base font-bold text-bakery-accent">
-                  <span>Open Calculator</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* CATEGORY 2: Cakes & Pastry */}
-        <section id="pastry">
-          <div className="flex items-center gap-2.5 mb-5 border-b border-bakery-border pb-3">
-            <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
-              <CakeSlice className="w-5 h-5" />
+              {/* Description */}
+              <p className="text-base text-bakery-muted leading-relaxed mb-6">
+                Calculate true sourdough hydration, starter split contribution, and prefermented flour ratios accurately.
+              </p>
             </div>
+
+            {/* Bottom Solid Pill Button CTA */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark">Cakes &amp; Pastry Conversions</h2>
-              <p className="text-base text-bakery-muted mt-0.5">Pan volume substitution, scaling factors, and thermal oven guidance.</p>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-bakery-accent group-hover:bg-bakery-accentHover text-white font-bold text-sm shadow-xs transition-colors">
+                <span>Calculate Hydration</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
             </div>
-          </div>
+          </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {pastryTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tools/${tool.slug}`}
-                className="bg-white rounded-2xl border border-bakery-border p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-bakery-accent">
-                      {tool.categoryLabel}
-                    </span>
-                    <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
-                      {getToolIcon(tool.slug)}
-                    </div>
-                  </div>
+          {/* Card 2: Baker's Percentage */}
+          <Link
+            id="scale"
+            href="/tools/bakers-percentage-calculator"
+            className="bg-white rounded-2xl border border-stone-200/90 p-5 shadow-xs hover:border-bakery-accent/50 hover:shadow-lg transition-all duration-200 group flex flex-col justify-between"
+          >
+            <div>
+              {/* Card Photo Thumbnail */}
+              <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-5 border border-stone-100 bg-stone-100">
+                <Image
+                  src="/images/card-bakers-scale.webp"
+                  alt="Baker percentage recipe notebook and digital scale"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
-                    {tool.name}
-                  </h3>
-                  <p className="text-base text-bakery-muted mt-2.5 leading-relaxed">
-                    {tool.shortDescription}
-                  </p>
+              {/* Icon + Title Header */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center text-bakery-accent shrink-0 group-hover:bg-bakery-accent group-hover:text-white transition-colors">
+                  <Scale className="w-5 h-5" />
                 </div>
+                <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-tight">
+                  Baker's Percentage
+                </h3>
+              </div>
 
-                <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-sm sm:text-base font-bold text-bakery-accent">
-                  <span>Open Calculator</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              {/* Description */}
+              <p className="text-base text-bakery-muted leading-relaxed mb-6">
+                Universal recipe scaling tool with flour as the 100% baseline. Scale by flour weight or desired total batch weight.
+              </p>
+            </div>
+
+            {/* Bottom Solid Pill Button CTA */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-bakery-accent group-hover:bg-bakery-accentHover text-white font-bold text-sm shadow-xs transition-colors">
+                <span>Scale Recipe</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </div>
+          </Link>
+
+          {/* Card 3: Baking Pan Converter */}
+          <Link
+            id="pastry"
+            href="/tools/baking-pan-converter"
+            className="bg-white rounded-2xl border border-stone-200/90 p-5 shadow-xs hover:border-bakery-accent/50 hover:shadow-lg transition-all duration-200 group flex flex-col justify-between"
+          >
+            <div>
+              {/* Card Photo Thumbnail */}
+              <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-5 border border-stone-100 bg-stone-100">
+                <Image
+                  src="/images/card-pan-converter.webp"
+                  alt="Freshly baked cake slice and assorted baking pans"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+
+              {/* Icon + Title Header */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center text-bakery-accent shrink-0 group-hover:bg-bakery-accent group-hover:text-white transition-colors">
+                  <CakeSlice className="w-5 h-5" />
                 </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+                <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-tight">
+                  Pan Size Converter
+                </h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-base text-bakery-muted leading-relaxed mb-6">
+                Convert recipe quantities between round, square, rectangular, and Bundt pans based on geometric volume capacity.
+              </p>
+            </div>
+
+            {/* Bottom Solid Pill Button CTA */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-bakery-accent group-hover:bg-bakery-accentHover text-white font-bold text-sm shadow-xs transition-colors">
+                <span>Convert Pan</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </div>
+          </Link>
+        </div>
       </div>
 
       {/* WHY PRECISION BAKING MATH? */}
