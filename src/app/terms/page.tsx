@@ -39,7 +39,7 @@ export default function TermsPage() {
             2. Mathematical Accuracy &amp; Culinary Disclaimer
           </h2>
           <p className="text-bakery-muted">
-            While all formulas are verified against established culinary literature and tested with high precision, baking outcomes depend on environmental factors including ambient temperature, humidity, flour protein content, and oven calibration. Tools are provided on an "as-is" basis without guarantees of baking results.
+            While all formulas are verified against established culinary literature and tested with high precision, baking outcomes depend on environmental factors including ambient temperature, humidity, flour protein content, and oven calibration. Tools are provided on an &quot;as-is&quot; basis without guarantees of baking results.
           </p>
         </section>
 
@@ -48,7 +48,7 @@ export default function TermsPage() {
             3. Intellectual Property
           </h2>
           <p className="text-bakery-muted">
-            The design, text, branding, and original calculation code of {SITE_NAME} are protected by copyright. Standard mathematical baking formulas (baker's percentages, geometric volume) are universal mathematical principles.
+            The design, text, branding, and original calculation code of {SITE_NAME} are protected by copyright. Standard mathematical baking formulas (baker&apos;s percentages, geometric volume) are universal mathematical principles.
           </p>
         </section>
       </div>

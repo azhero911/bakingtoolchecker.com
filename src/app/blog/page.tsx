@@ -7,7 +7,7 @@ import { Clock, ArrowRight, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Baking Guides & Bread Science Articles',
-  description: 'In-depth, mathematically verified baking guides on sourdough hydration, baker's percentages, and cake pan conversions.',
+  description: "In-depth, mathematically verified baking guides on sourdough hydration, baker's percentages, and cake pan conversions.",
 };
 
 export default function BlogIndexPage() {

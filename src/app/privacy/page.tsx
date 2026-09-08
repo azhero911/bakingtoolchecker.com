@@ -41,7 +41,7 @@ export default function PrivacyPage() {
             2. Local Browser Storage
           </h2>
           <p className="text-bakery-muted">
-            When you adjust ingredient weights or toggle unit preferences (grams, ounces, inches, centimeters), values may be saved to your device's local storage solely for your kitchen convenience on repeat visits. You can clear this data at any time through your browser settings.
+            When you adjust ingredient weights or toggle unit preferences (grams, ounces, inches, centimeters), values may be saved to your device&apos;s local storage solely for your kitchen convenience on repeat visits. You can clear this data at any time through your browser settings.
           </p>
         </section>
 

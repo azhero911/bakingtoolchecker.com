@@ -20,7 +20,7 @@ export default function ContactPage() {
           Contact &amp; Tool Requests
         </h1>
         <p className="text-base sm:text-lg text-bakery-muted mt-2 leading-relaxed">
-          Have an idea for a new baking calculator or feedback on an existing tool? We'd love to hear from you.
+          Have an idea for a new baking calculator or feedback on an existing tool? We&apos;d love to hear from you.
         </p>
       </div>
 

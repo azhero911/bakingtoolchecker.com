@@ -29,7 +29,7 @@ export default function AboutPage() {
         <section className="space-y-3">
           <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark flex items-center gap-2">
             <Wheat className="w-6 h-6 text-bakery-accent" />
-            The Artisan Baker's Problem
+            The Artisan Baker&apos;s Problem
           </h2>
           <p className="text-bakery-muted">
             Baking is an exact science where a small variance in water or flour completely transforms dough extensibility, fermentation rate, and final crumb openness. Yet, most online calculators overlook critical factors: they ignore the water contained in sourdough starters, force imprecise cup measurements, or rely on slow, ad-choked web pages.
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div className="p-4 rounded-xl bg-amber-50/60 border border-amber-100">
               <h3 className="font-bold text-base text-bakery-dark mb-1">100% Flour Baseline</h3>
               <p className="text-sm text-bakery-muted">
-                Strict adherence to the professional Baker's Math convention where the total flour weight serves as the immutable reference denominator.
+                Strict adherence to the professional Baker&apos;s Math convention where the total flour weight serves as the immutable reference denominator.
               </p>
             </div>
           </div>
