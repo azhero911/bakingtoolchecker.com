@@ -244,7 +244,7 @@ export default function HomePage() {
       </div>
 
       {/* WHY PRECISION BAKING MATH? */}
-      <section className="bg-white rounded-2xl border border-bakery-border p-6 sm:p-8 mb-14 shadow-xs">
+      <section id="why-precision-baking-math" className="bg-white rounded-2xl border border-bakery-border p-6 sm:p-8 mb-14 shadow-xs scroll-mt-24">
         <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark tracking-tight mb-2">
           Why Precision Baking Math Matters
         </h2>
@@ -286,7 +286,7 @@ export default function HomePage() {
       </section>
 
       {/* HOW IT WORKS (3 Simple Steps) */}
-      <section className="mb-8">
+      <section id="how-it-works" className="mb-8 scroll-mt-24">
         <div className="text-center max-w-lg mx-auto mb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark tracking-tight">
             How It Works
