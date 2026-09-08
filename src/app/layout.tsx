@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     ],
     shortcut: '/favicon.ico',
   },
+  verification: {
+    google: 'SlfwyzB-2CCD-w2QJozo4XGN8UTuGAWGHIhtfyd3DpA',
+  },
   openGraph: {
     siteName: SITE_NAME,
     locale: 'en_US',

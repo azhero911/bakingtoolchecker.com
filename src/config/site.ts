@@ -10,7 +10,7 @@ function normalizeUrl(url: string): string {
 }
 
 export const SITE_URL = normalizeUrl(
-  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://bakingtoolcalculators.vercel.app'
 );
 
 export const SITE_NAME = 'BakingToolCalculators';
