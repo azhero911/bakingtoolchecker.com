@@ -61,7 +61,7 @@ export default function HomePage() {
           </div>
 
           {/* 3 Benefit Highlights */}
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-5 mt-7 text-xs font-semibold text-bakery-muted">
+          <div className="flex flex-wrap items-center gap-y-2.5 gap-x-6 mt-7 text-sm sm:text-base font-semibold text-bakery-muted">
             <span className="flex items-center gap-1.5">
               <Zap className="w-4 h-4 text-bakery-accent" /> Works instantly
             </span>
@@ -87,8 +87,8 @@ export default function HomePage() {
               sizes="(max-width: 1024px) 100vw, 420px"
             />
             <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg border border-amber-100 shadow-xs flex items-center justify-between">
-              <span className="text-[11px] font-bold text-bakery-dark">Better Baking Starts with Better Math</span>
-              <span className="text-[10px] font-bold text-bakery-accent uppercase tracking-wide">Accurate Math</span>
+              <span className="text-xs font-bold text-bakery-dark">Better Baking Starts with Better Math</span>
+              <span className="text-[11px] font-bold text-bakery-accent uppercase tracking-wide">Accurate Math</span>
             </div>
           </div>
         </div>
@@ -99,12 +99,12 @@ export default function HomePage() {
         {/* CATEGORY 1: Bread & Sourdough */}
         <section id="bread">
           <div className="flex items-center gap-2.5 mb-5 border-b border-bakery-border pb-3">
-            <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
-              <Wheat className="w-4 h-4" />
+            <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
+              <Wheat className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-bakery-dark">Bread &amp; Sourdough Calculators</h2>
-              <p className="text-xs text-bakery-muted">Artisan formula mathematics, starter contributions, and hydration scaling.</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark">Bread &amp; Sourdough Calculators</h2>
+              <p className="text-base text-bakery-muted mt-0.5">Artisan formula mathematics, starter contributions, and hydration scaling.</p>
             </div>
           </div>
 
@@ -113,27 +113,27 @@ export default function HomePage() {
               <Link
                 key={tool.slug}
                 href={`/tools/${tool.slug}`}
-                className="bg-white rounded-2xl border border-bakery-border p-5 sm:p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-bakery-border p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-bakery-accent">
+                    <span className="text-xs font-bold uppercase tracking-wider text-bakery-accent">
                       {tool.categoryLabel}
                     </span>
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+                    <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
                       {getToolIcon(tool.slug)}
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
                     {tool.name}
                   </h3>
-                  <p className="text-sm text-bakery-muted mt-2 leading-relaxed">
+                  <p className="text-base text-bakery-muted mt-2.5 leading-relaxed">
                     {tool.shortDescription}
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-bakery-accent">
+                <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-sm sm:text-base font-bold text-bakery-accent">
                   <span>Open Calculator</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -145,12 +145,12 @@ export default function HomePage() {
         {/* CATEGORY 2: Cakes & Pastry */}
         <section id="pastry">
           <div className="flex items-center gap-2.5 mb-5 border-b border-bakery-border pb-3">
-            <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
-              <CakeSlice className="w-4 h-4" />
+            <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-bakery-accent">
+              <CakeSlice className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-bakery-dark">Cakes &amp; Pastry Conversions</h2>
-              <p className="text-xs text-bakery-muted">Pan volume substitution, scaling factors, and thermal oven guidance.</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark">Cakes &amp; Pastry Conversions</h2>
+              <p className="text-base text-bakery-muted mt-0.5">Pan volume substitution, scaling factors, and thermal oven guidance.</p>
             </div>
           </div>
 
@@ -159,27 +159,27 @@ export default function HomePage() {
               <Link
                 key={tool.slug}
                 href={`/tools/${tool.slug}`}
-                className="bg-white rounded-2xl border border-bakery-border p-5 sm:p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-bakery-border p-6 shadow-xs hover:border-bakery-accent/50 hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-bakery-accent">
+                    <span className="text-xs font-bold uppercase tracking-wider text-bakery-accent">
                       {tool.categoryLabel}
                     </span>
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+                    <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100/80 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
                       {getToolIcon(tool.slug)}
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-bakery-dark group-hover:text-bakery-accent transition-colors leading-snug">
                     {tool.name}
                   </h3>
-                  <p className="text-sm text-bakery-muted mt-2 leading-relaxed">
+                  <p className="text-base text-bakery-muted mt-2.5 leading-relaxed">
                     {tool.shortDescription}
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-bakery-accent">
+                <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-sm sm:text-base font-bold text-bakery-accent">
                   <span>Open Calculator</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -194,37 +194,37 @@ export default function HomePage() {
         <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark tracking-tight mb-2">
           Why Precision Baking Math Matters
         </h2>
-        <p className="text-xs sm:text-sm text-bakery-muted mb-6">
+        <p className="text-base text-bakery-muted mb-6">
           Baking is culinary chemistry. Consistency and predictability depend on precision.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="space-y-1.5">
-            <h3 className="text-sm font-bold text-bakery-dark flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-bakery-accent inline-block"></span>
+          <div className="space-y-2">
+            <h3 className="text-base font-bold text-bakery-dark flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-bakery-accent inline-block"></span>
               Weight gives you consistency
             </h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <p className="text-base text-bakery-muted leading-relaxed">
               Measuring ingredients by weight makes recipes easier to reproduce because volume measurements can vary with ingredient density and measuring technique.
             </p>
           </div>
 
-          <div className="space-y-1.5">
-            <h3 className="text-sm font-bold text-bakery-dark flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-bakery-accent inline-block"></span>
+          <div className="space-y-2">
+            <h3 className="text-base font-bold text-bakery-dark flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-bakery-accent inline-block"></span>
               Starter contributes flour &amp; water
             </h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <p className="text-base text-bakery-muted leading-relaxed">
               When calculating sourdough hydration, the flour and water contained in the starter should be included in the calculation to determine the dough’s true hydration.
             </p>
           </div>
 
-          <div className="space-y-1.5">
-            <h3 className="text-sm font-bold text-bakery-dark flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-bakery-accent inline-block"></span>
+          <div className="space-y-2">
+            <h3 className="text-base font-bold text-bakery-dark flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-bakery-accent inline-block"></span>
               Baker’s percentages scale easily
             </h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <p className="text-base text-bakery-muted leading-relaxed">
               Using total flour as the 100% reference baseline makes it simple to compare ratios, adjust hydration, and scale formulas for any batch size without recalculating proportions.
             </p>
           </div>
@@ -237,38 +237,38 @@ export default function HomePage() {
           <h2 className="text-xl sm:text-2xl font-bold text-bakery-dark tracking-tight">
             How It Works
           </h2>
-          <p className="text-xs sm:text-sm text-bakery-muted mt-1">
+          <p className="text-base text-bakery-muted mt-1.5">
             Three simple steps to calculate and scale any recipe.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-5 text-center">
-            <div className="w-7 h-7 rounded-full bg-bakery-accent text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">
+          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-6 text-center">
+            <div className="w-8 h-8 rounded-full bg-bakery-accent text-white font-bold text-sm flex items-center justify-center mx-auto mb-3">
               1
             </div>
-            <h3 className="text-sm font-bold text-bakery-dark mb-1">Choose a calculator</h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <h3 className="text-base font-bold text-bakery-dark mb-1.5">Choose a calculator</h3>
+            <p className="text-base text-bakery-muted leading-relaxed">
               Select sourdough hydration, universal recipe scaling, or baking pan conversions.
             </p>
           </div>
 
-          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-5 text-center">
-            <div className="w-7 h-7 rounded-full bg-bakery-accent text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">
+          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-6 text-center">
+            <div className="w-8 h-8 rounded-full bg-bakery-accent text-white font-bold text-sm flex items-center justify-center mx-auto mb-3">
               2
             </div>
-            <h3 className="text-sm font-bold text-bakery-dark mb-1">Enter measurements</h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <h3 className="text-base font-bold text-bakery-dark mb-1.5">Enter measurements</h3>
+            <p className="text-base text-bakery-muted leading-relaxed">
               Input flour weight, hydration target, ingredient percentages, or pan dimensions.
             </p>
           </div>
 
-          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-5 text-center">
-            <div className="w-7 h-7 rounded-full bg-bakery-accent text-white font-bold text-xs flex items-center justify-center mx-auto mb-3">
+          <div className="bg-amber-50/60 rounded-xl border border-amber-100 p-6 text-center">
+            <div className="w-8 h-8 rounded-full bg-bakery-accent text-white font-bold text-sm flex items-center justify-center mx-auto mb-3">
               3
             </div>
-            <h3 className="text-sm font-bold text-bakery-dark mb-1">Get instant results</h3>
-            <p className="text-xs text-bakery-muted leading-relaxed">
+            <h3 className="text-base font-bold text-bakery-dark mb-1.5">Get instant results</h3>
+            <p className="text-base text-bakery-muted leading-relaxed">
               View exact ingredient weights, volume ratios, and thermal baking guidance immediately.
             </p>
           </div>
