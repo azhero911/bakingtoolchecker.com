@@ -6,14 +6,14 @@ import { Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B132B] text-slate-300 pt-16 pb-12 mt-20 border-t border-slate-800">
+    <footer className="bg-[#181109] text-stone-300 pt-16 pb-12 mt-20 border-t-4 border-bakery-accent shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Main Footer Multi-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-slate-800/80">
-          {/* Col 1: Brand & Tagline (5 cols on lg) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-stone-800">
+          {/* Col 1: Brand & Tagline (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-sm flex-shrink-0 border border-orange-400/40">
                 <Image
                   src="/images/logo.png"
                   alt={`${SITE_NAME} Logo`}
@@ -26,32 +26,32 @@ export default function Footer() {
                 <span className="font-extrabold text-xl text-white tracking-tight leading-tight">
                   Baking
                 </span>
-                <span className="font-extrabold text-xl text-white tracking-tight leading-tight">
+                <span className="font-extrabold text-xl text-bakery-accent tracking-tight leading-tight">
                   Calculators
                 </span>
               </div>
             </Link>
 
-            <p className="text-base text-slate-300 leading-relaxed max-w-sm">
+            <p className="text-base text-stone-300 leading-relaxed max-w-sm">
               Free, private in-browser recipe calculators with precision density and baker’s math. Convert and scale formulas between Metric, US Customary, and Imperial systems with confidence.
             </p>
 
-            <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400/90 pt-1">
+            <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 pt-1">
               <Sparkles className="w-4 h-4 text-bakery-accent" />
-              <span>100% In-Browser Client Math</span>
+              <span>100% Client-Side In-Browser Math</span>
             </div>
           </div>
 
           {/* Col 2: Tools (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide">
-              Tools
+            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide border-b border-stone-800 pb-1">
+              Calculators
             </h4>
             <ul className="space-y-2.5 text-base">
               <li>
                 <Link
                   href="/tools/sourdough-hydration-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   Sourdough Hydration
                 </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/tools/bakers-percentage-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   Baker's Percentage
                 </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/tools/baking-pan-converter"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   Pan Size Converter
                 </Link>
@@ -75,65 +75,73 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#calculators"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
-                  All Calculators
+                  All Tools
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Formulas & Math (2 cols) */}
+          {/* Col 3: Baking Guides & Blog (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide">
-              Formulas
+            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide border-b border-stone-800 pb-1">
+              Baking Guides
             </h4>
             <ul className="space-y-2.5 text-base">
               <li>
                 <Link
-                  href="/tools/sourdough-hydration-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  href="/blog/true-sourdough-hydration-guide"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   True Starter Split
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/tools/bakers-percentage-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  href="/blog/bakers-percentage-universal-scaling-guide"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
-                  100% Flour Baseline
+                  Baker's Math 100%
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/tools/baking-pan-converter"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  href="/blog/baking-pan-size-conversion-guide"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
-                  Geometric Pan Volume
+                  Pan Scaling Guide
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/tools/bakers-percentage-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  href="/blog"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors font-semibold"
                 >
-                  Dual Recipe Scaling
+                  All Guides &amp; Blog →
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Help & Trust (2 cols) */}
+          {/* Col 4: About & Trust (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide">
-              Help
+            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide border-b border-stone-800 pb-1">
+              Company
             </h4>
             <ul className="space-y-2.5 text-base">
               <li>
                 <Link
+                  href="/about"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#why-precision-baking-math"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   Why Baking Math
                 </Link>
@@ -141,17 +149,17 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#how-it-works"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
                   How It Works
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/tools/sourdough-hydration-calculator"
-                  className="text-slate-300 hover:text-white hover:underline transition-colors"
+                  href="/contact"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors"
                 >
-                  Baking FAQ
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -159,24 +167,30 @@ export default function Footer() {
 
           {/* Col 5: Legal & Privacy (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide">
+            <h4 className="text-base sm:text-lg font-bold text-white tracking-wide border-b border-stone-800 pb-1">
               Legal
             </h4>
             <ul className="space-y-2.5 text-base">
               <li>
-                <span className="text-slate-300 block">
+                <Link
+                  href="/privacy"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors block font-semibold"
+                >
                   Privacy Policy
-                </span>
-                <span className="text-xs text-slate-400 block mt-1 leading-snug">
-                  Calculations run locally in your browser. We don't upload calculator inputs to a server.
+                </Link>
+                <span className="text-xs text-stone-400 block mt-1 leading-snug">
+                  Zero server uploads. Calculations execute locally on your device.
                 </span>
               </li>
               <li className="pt-2">
-                <span className="text-slate-300 block">
+                <Link
+                  href="/terms"
+                  className="text-stone-300 hover:text-amber-400 hover:underline transition-colors block font-semibold"
+                >
                   Terms of Use
-                </span>
-                <span className="text-xs text-slate-400 block mt-1 leading-snug">
-                  Free to use. No account or sign-up required.
+                </Link>
+                <span className="text-xs text-stone-400 block mt-1 leading-snug">
+                  Free to use for personal &amp; commercial baking.
                 </span>
               </li>
             </ul>
@@ -184,11 +198,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:text-base text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:text-base text-stone-400">
           <p>
             © {new Date().getFullYear()} {SITE_NAME}. Free, private, client-side baking math for bakers.
           </p>
-          <p className="text-xs sm:text-sm text-slate-500">
+          <p className="text-xs sm:text-sm text-stone-500">
             v1.0 — In-Browser Precision Baking Math
           </p>
         </div>
